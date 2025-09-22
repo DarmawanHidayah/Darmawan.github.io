@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Infrastruktur dan Logistik </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="lib/xlsx.full.min.js"></script>
+  <link rel="icon" href="data:,"> <!-- Empty favicon to prevent 404 -->
+</head>
+<body>
+  <!-- Video Splash Container -->
+  <div id="videoSplash" class="video-splash">
+    <video id="splashVideo" autoplay muted>
+      <source src="videos/splash-intro.mp4" type="video/mp4">
+    </video>
+    
+  </div>
+
+  <!-- Splash Screen -->
+  <div id="splash" class="splash hidden">
+    <div class="splash-header">
+      <div class="logo-static"></div>
+    </div>
+
+    <div class="lang-select lang-select-bottom">
+      <button class="lang-btn active" data-lang="id">ID</button>
+      <div class="lang-divider"></div>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <h1 id="splashTitle">Infrastruktur dan Logistik</h1>
+
+    <div class="enter-container">
+      <div class="enter-icon" id="enterGallery" title="Enter Gallery"></div>
+    </div>
+    
+  </div>
+  
+  <!-- Add this after the splash div and before the app div -->
+<!-- Second Home Page -->
+<!-- Second Home Page -->
+<div id="secondHome" class="hidden">
+  
+
+  <div class="second-home-container">
+    <div class="second-home-logo">
+      <img src="images/logo-large.png" alt="Company Logo" class="large-logo">
+    </div>
+    
+    <div class="second-home-content">
+      <h1 id="secondHomeTitle">Infrastruktur dan Logistik</h1>
+
+      <div class="two-column-text">
+  <div class="column">
+    <div id="column1Text" class="numbered-column">
+      <!-- Konten akan di-generate oleh JavaScript -->
+    </div>
+  </div>
+  <div class="column">
+    <div id="column2Text" class="numbered-column">
+      <!-- Konten akan di-generate oleh JavaScript -->
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+<div class="second-home-buttons">
+  <button id="backToSplashBtn" class="back-to-splash-btn">
+  <img src="images/icons/icon-home.png" alt="Back to Home" class="icon-btn">
+</button>
+
+   <div class="enter-gallery-btn" id="enterGalleryBtn">
+  <img src="images/icons/enter-id.png" alt="Enter Gallery" id="enterGalleryIcon" class="icon-btn" data-preload>
+</div>
+</div>
+<!-- Letakkan sebelum </div> penutup #secondHome -->
+<div class="lang-select lang-select-bottom">
+  <button class="lang-btn active" data-lang="id">ID</button>
+  <div class="lang-divider"></div>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
+
+</div>
+
+  <!-- Gallery App -->
+  <div id="app" class="hidden">
+    <video autoplay muted loop id="bgVideo">
+      <source src="videos/gallery-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <header>
+      <div class="header-left">
+        <div class="logo-title">
+          <img src="images/icon-logo.png" alt="Logo" class="icon-logo" />
+          <span id="appTitle">PROPERTY</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+  <div class="dropdown-container">
+    <button id="dropdownToggle" class="dropdown-toggle">
+      <span id="dropdownSelected">Pilih Tahun/Kegiatan</span>
+      <img src="images/icons/dropdown-arrow.png" alt="Dropdown" class="dropdown-arrow">
+    </button>
+    <div id="dropdownList" class="dropdown-list hidden">
+      <div class="dropdown-content" id="dropdownContent"></div>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+    <div id="itemListPanel" class="item-list-panel hidden">
+  <div class="panel-header">
+    <span id="panelTitle">Daftar Tahun & Kegiatan</span>
+    <button id="closePanelBtn" class="close-panel-btn">&times;</button>
+  </div>
+  <div class="panel-content" id="panelContent"></div>
+</div>
+
+    <main>
+      <!--<div id="itemListPanel" class="item-list-panel"></div> -->
+      <div id="activeItemDisplay" class="active-item-display"></div>
+
+      <div class="gallery-content">
+        <div class="main-content-container">
+          <div class="main-image-container">
+            <img id="mainImage" src="" alt="Selected image">
+              <div id="zoomIcon" class="zoom-icon" title="Zoom"></div>
+          </div>
+          <div class="description-container">
+            <div id="imageDescription" class="image-description"></div>
+          </div>
+        </div>
+        
+        <div class="thumbnails-container">
+          <div class="thumbnails" id="thumbnails"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-left">
+     
+
+      </div>
+      <div class="footer-center">
+        <!-- Ganti bagian year-navigation dengan: -->
+<div class="year-navigation">
+  <button id="prevYear" class="year-nav-btn" aria-label="sebelumnya"></button>
+  <h2 id="yearTitle">2023</h2>
+  <button id="nextYear" class="year-nav-btn" aria-label="selanjutnya"></button>
+</div>
+
+      </div>
+      <div class="footer-right">
+        <button id="backHomeBtn" class="back-home-btn">
+  <img src="images/icons/icon-home.png" alt="Home" class="icon-btn">
+</button>
+      </div>
+    </footer>
+      <!-- Sebelum </div> penutup #app -->
+<div class="lang-select lang-select-bottom">
+  <button class="lang-btn active" data-lang="id">ID</button>
+  <div class="lang-divider"></div>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="languageSound" src="sounds/language-click.WAV" preload="auto"></audio>
+  <audio id="yearSound" src="sounds/year-click.WAV" preload="auto"></audio>
+  <audio id="thumbClickSound" src="sounds/thumb-click.wav" preload="auto"></audio>
+
+
+  <script src="script.js"></script>
+  <!-- Zoom Modal -->
+<div id="zoomModal" class="zoom-modal hidden">
+  <div class="zoom-modal-content">
+    <span class="close-zoom">&times;</span>
+    <img id="zoomedImage" src="" alt="Zoomed Image">
+  </div>
+</div>
+</body>
+</html>
+
+
+<script>
+  // Setiap kali window resize atau setelah klik/tutup zoom
+  function lockScroll() {
+    document.body.style.overflow = "hidden";
+  }
+
+  // Paksa lagi setelah keluar zoom
+  window.addEventListener("resize", lockScroll);
+  document.addEventListener("click", lockScroll);
+</script>
